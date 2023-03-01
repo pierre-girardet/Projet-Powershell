@@ -1,5 +1,6 @@
 Connect-AzAccount
 
+#Déclaration des variables
 $zone = "francecentral"
 $nomgrpressource = "ESGI"
 $nomreseauvirtel = "VSWITCH"
@@ -11,6 +12,7 @@ $typedestockage = "Standard_LRS"
 $nommachine = "Machine1"
 $cheminstockage = "vhds/myVMDisk1.vhd"
 
+#Création du groupe de ressources
 $groupederesource = New-AzResourceGroup -Name $nomgrpressource -Location $zone
 
 $subnetConfig = New-AzVirtualNetworkSubnetConfig -name "Subnet" -AddressPrefix $subnet
@@ -20,9 +22,10 @@ $reseauvirtuel = New-AzVirtualNetwork -ResourceGroupName $nomgrpressource -Locat
 $adresseippublique = New-AzPublicIpAddress -Name "IpPublique" -ResourceGroupName $nomgrpressource -Location $zone -AllocationMethod Static
 
 Get-AzStorageAccountNameAvailability $nomcomptedestockage
-
+#[0] pour spécifier l'ID du subnet
 $interfacereseau = New-AzNetworkInterface -Name "InterfaceReseau" -ResourceGroupName $nomgrpressource -Location $zone -SubnetId $reseauvirtuel.Subnets[0].Id -PublicIpAddressId $adresseippublique.Id
 
+#Création de la VM
 $identifiants = Get-Credential -Message "Entre le nom d'utilisateur de la vm et son mot de passe"
 
 $myVM = New-AzVMConfig -VMName $nommachine -VMSize $typedemachine
