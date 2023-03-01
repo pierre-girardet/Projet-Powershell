@@ -9,6 +9,12 @@ Par la suite une fois la Vm de configurée on va installer et configurer un cont
 
 Et enfin on va configurer ce domaine en ajoutant, des groupes, utilisateurs dans le domaine à partir d'un fichier txt et CSV.
 
+Tout d'abord pour éxecuter ces scripts il faut installer le module Azure pour powershell et non utiliser le Cloud Shell ! :
+
+"Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force"
+
+Il faut aussi avoir un abonnement azure valide et qui fonctionne
+
 On execute le premier fichier avec :
 
 ./projet1.ps1 -fichier "nom-du-fichier-txt 
