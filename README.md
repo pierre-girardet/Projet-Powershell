@@ -19,7 +19,7 @@ Ce fichier va configurer la vm et installer et configurer l'active directory.
 
 Ensuite pour ajouter des éléments à notre AD on fait la commande suivante :
 
-./AD1.ps1 -fichiertxt text.txt -utilisateurs Classeur1.csv -fichiergroupes groupes.txt
+./AD.ps1 -fichiertxt text.txt -utilisateurs Classeur1.csv -fichiergroupes groupes.txt
 
 Ici le fichier txt est le même que pour le premier code, le CSV est pour les utilisateurs à créer avec ses groupes respectif et enfin le fichier txt (groupes.txt) est pour les groupes.
 
