@@ -1,0 +1,12 @@
+NomVm:VM-Video
+Type de Vm:Standard_B2s
+Zone:francecentral
+Nom Du Groupe de ressource:TEST-Video
+Nom Vswitch:switch1
+Plan Ip Switch:192.168.0.0/16
+NomSubnet:Sub1
+Subnet Switch:192.168.1.0/24
+Disques:DisqueOS/128/Standard_LRS
+NomCompteStockage:testvideoesgigirardet
+NomDns:video.local
+
