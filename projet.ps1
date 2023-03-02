@@ -26,9 +26,9 @@ $NomCompteStockage = ((Get-Content $fichier)[9] -split ':')[1].Trim()
 
 $nomdns = ((Get-Content $fichier)[10] -split ':')[1].Trim()
 
-grouperessource -GroupeRessourceNom $NomGroupeRessource -zone $NomZone
+grouperessource -GroupeRessourceNom $NomGroupeRessource -zone $NomZone.   #on appelle la fonction groupe de ressource
 
-$reset = NomVM -GroupeRessourceNom $NomGroupeRessource -zone $NomZone -MachineNom $NomMachine 
+$reset = NomVM -GroupeRessourceNom $NomGroupeRessource -zone $NomZone -MachineNom $NomMachine #on teste le nom de la VM 
 
 if ($reset -eq 1) 
     {
@@ -38,7 +38,7 @@ if ($reset -eq 1)
 $reset = compte-stockage -GroupeRessourceNom $NomGroupeRessource -CompteStockageNom $NomCompteStockage -zone $NomZone #création ou récupération compte de stockage
 if ($reset -eq 1) 
     {
-        Write-Output "Impossible d'utiliser ce groupe de stockage car il est déjà utilisé"
+        Write-Output "Impossible d'utiliser ce groupe de stockage car il est déjà utilisé"        #on appelle le groupe de stockage, on le créé car on a besoin d'un compte de stockage pour stcoker les logs ( recommandation azure)
         exit
     }       
     
