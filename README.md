@@ -30,3 +30,7 @@ Ensuite pour ajouter des éléments à notre AD on fait la commande suivante :
 Ici le fichier txt est le même que pour le premier code, le CSV est pour les utilisateurs à créer avec ses groupes respectif et enfin le fichier txt (groupes.txt) est pour les groupes.
 
 Un exemple des fichier configuration est disponible dans ce git. 
+
+Lien vidéo youtube ou on test les différents codes :
+
+https://youtu.be/C18AyiSfrKQ
